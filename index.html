@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Boil ur Egg</title>
+</head>
+<body>
+    <div id="home" class="page">
+    <header>
+        <h1>Choose ur Fav Mode</h1>
+    </header>
+    <main class="timecontainer">
+        <section class="chooseegg">
+        <div class="eggcard">
+            <div class="card" onclick="opentimer('soft')">
+            Soft Egg 🥚
+            <span class="cardsubtitle">10 Minutes</span>
+            </div>
+            <div class="card" onclick="opentimer('medium')">
+            Medium Egg 🍳
+            <span class="cardsubtitle">15 Minutes</span>
+            </div>
+            <div class="card" onclick="opentimer('hard')">
+            Hard Egg 🔥
+            <span class="cardsubtitle">20 Minutes</span>
+            </div>
+        </div>
+        </section>
+    </main>
+</div>
+<div id="timepage" class="hidden-page">
+    <header>
+        <button class="backbtn" onclick="goBack()"> < Back </button>
+        <h1 id="timertitle">Boiling Timer</h1>
+    </header>
+    <main class="timercontainer">
+        <div class="eggdisplay">
+            <div class="raw">
+                <canvas id="rawegg" width="192" height="256"></canvas>
+            </div>
+            <div class="stageone">
+                <canvas id="boiling" width="192" height="256"></canvas>
+            </div>
+            <div class="stagetwo">
+                <canvas id="almostDone" width="192" height="256"></canvas>
+            </div>
+            <div class="Done">
+                <canvas id="wellDone" width="192" height="256"></canvas>
+            </div>
+        </div>
+        <div class="paragraph">
+            <p>Your eggs deserve better than vibes and guesswork.</p>
+        </div>
+        <div class="status-area">
+            <div class="timeline">
+                <div class="progress" id="progressbar"></div>
+            </div>
+            <div class="time-display">
+                <span id="timeleft"></span>Seconds remaining..
+            </div>
+        </div>
+        <div class="controls">
+            <button id="startbtn">Start Timer</button>
+        </div>
+    </main>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
